@@ -1,13 +1,17 @@
 import React from 'react'
 import './App.css'
-import Listing from './components/Listing'
+import {Listing} from './components/Listing'
+import { Lists } from './components/data'
+
 
 function App() {
+  const lists = {Lists}
+  
 
   return (
     <>
      <div className="item-list" >
-      <Listing />
+      <Listing lists = {lists}/>
       </div>
     </>
   )

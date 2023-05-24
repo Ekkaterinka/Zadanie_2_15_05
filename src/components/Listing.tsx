@@ -1,19 +1,11 @@
 import React from 'react'
 import { Lists } from './data'
 
-interface Lists {
-  listing_id: number;
-  url: string;
-  MainImage: {
-    url_570xN: string
-  };
-  title: string;
-  currency_code: string;
-  price: string;
-  quantity: number;
+interface Props {
+  lists: Lists
 }
 
-const Items: React.FC<Lists> = (props: Lists) => {
+export function Listing ({lists}: Props) {
   return (
     <>
       {Lists.map((element) => (
@@ -46,6 +38,3 @@ const Items: React.FC<Lists> = (props: Lists) => {
     </>
   )
 }
-
-
-export default Items
